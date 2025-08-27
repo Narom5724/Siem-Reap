@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    padding: 2rem 2rem;
+    padding-bottom: 9rem;
+    background-color: #2d2b2b;
+    height: 100%;
+}
+.head{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.head a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 9%;
+}
+.head .name{
+    color:  #00ffff;
+    font-size: 50px;
+    text-shadow: 0 0 20px yellowgreen;
+}
+.head .name .NAME{
+    color: #00ffff;
+    font-size: 50px;
+    text-shadow: 0 0 20px yellowgreen;
+}
+.name{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #00ffff;
+}
+.NAME{
+    color: #fff;
+}
+.body-container{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.text{
+    margin-top: 10rem;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    margin: 10px 0px;
+    font-size: 2.5rem;
+}
+.h2h{
+    color: #00ffff;
+}
+p{
+    margin: 10px 0;
+    color: #999;
+}
+.images{
+    margin-top: 7rem;
+    margin-right: 11rem;
+    border: 2px solid #00ffff;
+    border-radius: 50%;
+    box-shadow: 0 0 25px 10px #00ffff;
+    padding: 10px 10px;
+}
+img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+}
+/* button{
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: #00ffff;
+    border: none;
+}
+button:hover{
+    background-color: transparent;
+    border: 1px solid #00ffff;
+} */
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 250px;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  bottom: -5.9%;
+}
+
+.footer .social-icon i {
+  cursor: pointer;
+  font-size: 40px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 0 30px 30px;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}
+
+.footer .social-icon i:hover {
+  background-color: #75757575;
+  color: #ffffff;
+}
+
+.footer .footer-nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.footer .footer-nav li a {
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+  padding: 30px 25px;
+  font-weight: bold;
+}
+
+.footer .footer-nav li:hover a {
+  text-decoration: underline;
+}

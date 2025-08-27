@@ -1,0 +1,723 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+/* Container */
+.container {
+  width: 100%;
+}
+
+/* Navbar */
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  background-color: #d9ad7c;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav .logo {
+  width: 20%;
+}
+
+.nav .logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav .logo a h1 {
+  font-size: 38px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 0 0 20px black;
+}
+
+.nav .logo a h1:hover {
+  color: #333333;
+  text-shadow: 0 0 15px rgb(248, 248, 249);
+  transition: 0.3s;
+}
+
+.nav .logo a h1:active {
+  color: yellow;
+  text-shadow: 0 0 20px rgb(249, 249, 248);
+}
+
+.nav .responsive-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.nav .responsive-nav .navbar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav .responsive-nav .navbar li a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333333;
+  padding: 25px 30px;
+  width: 100%;
+  transition: all 0.3s linear;
+  border-radius: 10px;
+}
+
+.nav .responsive-nav .navbar li a:hover {
+  background-color: #222222;
+  color: #f2f2f2;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+.nav .responsive-nav .navbar li a.active {
+  /* background-color: #222222; */
+  color: #f2f2f2;
+  box-shadow: 0 0 15px rgb(249, 249, 248);
+}
+
+/* right navbar */
+.nav .responsive-nav .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav .responsive-nav .navbar-right .search {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 8px;
+}
+.nav .responsive-nav .navbar-right .search #search-box {
+  border: none;
+  padding: 8px;
+  margin-right: 6px;
+  border-radius: 10px 0 0 10px;
+}
+.nav .responsive-nav .navbar-right .search #search-btn {
+  border: none;
+  padding: 8px;
+  border-radius: 0 10px 10px 0;
+  margin-right: 60px;
+  color: #f2f2f2;
+  background-color: blue;
+  cursor: pointer;
+  margin-left: -5px; /* ដើម្បីភ្ជាប់ជាមួយ box */
+}
+.nav .responsive-nav .navbar-right .search #search-btn:hover {
+  background-color: whitesmoke;
+  color: blue;
+  box-shadow: 0 0 15px white;
+}
+.nav .responsive-nav .navbar-right .search #search-btn:active {
+  background-color: yellow;
+  color: #333333;
+  box-shadow: 0 0 15px #f2f2f2;
+}
+.nav .responsive-nav .navbar-right .login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav .responsive-nav .navbar-right .login a i {
+  cursor: pointer;
+  font-size: 25px;
+  background-color: #ffffff;
+  color: blue;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}
+.nav .responsive-nav .navbar-right .login i:hover {
+  background-color: blue;
+  color: #ffffff;
+  box-shadow: 0 0 20px lightskyblue;
+}
+.nav .responsive-nav .navbar-right .login i:active {
+  color: yellow;
+}
+
+/* Hambuger menu */
+.hambuger {
+  cursor: pointer;
+  font-size: 40px;
+  margin: 0 20px 20px;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+  display: none;
+}
+
+.hambuger i:hover {
+  color: rgb(196, 241, 14);
+  transition: 0.3s;
+  text-shadow: 0 0 15px rgb(248, 248, 249);
+  box-shadow: 0 0 15px rgb(249, 248, 248);
+  border-radius: 10%; 
+  background-color: #333333;
+}
+
+@keyframes  hambuger{
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* Image Container */
+.img-container {
+  width: 100%;
+  height: 92.6vh;
+  background-image: url(../img/image-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Modal */
+.img-container .modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.img-container .modal h1 {
+  font-size: 4.5em;
+  text-shadow: 5px 5px 10px #333333;
+  margin-bottom: 5px;
+}
+
+.img-container .modal h2 {
+  font-size: 2.5em;
+  margin-top: 5px;
+  text-shadow: 5px 5px 10px #333333;
+}
+
+.img-container .modal p {
+  font-size: 24px;
+  margin-top: 20px;
+  text-shadow: 5px 5px 10px #333333;
+  text-align: center;
+  margin: 20px;
+  line-height: 1.5;
+}
+
+.img-container .modal a {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  padding: 15px 50px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #ffffff;
+  border: 1px solid #333333;
+  margin-top: 20px;
+  transition: all 0.3s linear;
+}
+
+.img-container .modal a:hover {
+  background-color: #333333;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* City Section */
+.city {
+  width: 100%;
+  max-width: 70%;
+  margin: auto;
+  height: 100vh;
+  background-color: #ebebeb;
+  border-bottom: 1px solid lightgray;
+}
+
+.city .detail {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.city .detail .detail-title {
+  font-size: 3em;
+  margin-top: 20px;
+}
+
+.city .detail img {
+  width: 65%;
+  margin: auto;
+}
+
+.city .detail .desc {
+  text-indent: 60px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Btn */
+.btn {
+  display: block;
+  width: 120px;
+  text-decoration: none;
+  padding: 15px 0;
+  text-align: center;
+  background-color: #333333;
+  color: #ffffff;
+  margin-bottom: 20px;
+  transition: all 0.2s linear;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Title */
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  justify-content: flex-end;
+}
+.title h1 {
+  font-size: 3em;
+  color: #333333;
+}
+.title .line {
+  width: 230px;
+  height: 5px;
+  margin-top: 3px;
+  background-color: red;
+}
+
+/* Province Section */
+.province {
+  width: 100%;
+  max-width: 70%;
+  margin: auto;
+  height: 100vh;
+  background-color: #ebebeb;
+  border-bottom: 1px solid lightgray;
+}
+
+.province .detail {
+  width: 100%;
+  height: 80%;
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
+  align-items: center;
+}
+
+.province .detail .content-province {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
+  background-color: #b8b8b8;
+  padding: 10px 20px;
+  border-radius: 6px;
+  box-shadow: 2px 0px 5px #333333;
+  transition: all 0.1s linear;
+}
+
+.province .detail .content-province:hover {
+  box-shadow: 0px 2px 5px #333333;
+}
+
+.province .detail .content-province h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  font-size: 2.3em;
+}
+
+.province .detail .content-province .desc {
+  margin: 10px 0 20px 0;
+  font-size: 13px;
+  text-align: justify;
+}
+
+.province .detail .content-province img {
+  width: 100%;
+  cursor: pointer;
+  height: 45%;
+}
+
+/* About Section */
+.about {
+  width: 100%;
+  max-width: 70%;
+  margin: auto;
+  height: 100vh;
+  background-color: #ebebeb;
+  border-bottom: 1px solid lightgray;
+}
+
+.about .detail {
+  width: 100%;
+  height: 95%;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+}
+
+.about .detail .desc {
+  font-size: 16px;
+  font-style: italic;
+  text-align: justify;
+  text-indent: 60px;
+  background-color: #f6f6f6;
+  padding: 10px 5px;
+}
+
+/* Contact Section */
+.contact {
+  width: 100%;
+  max-width: 70%;
+  margin: auto;
+  height: 100vh;
+  background-color: #ebebeb;
+  border-bottom: 1px solid lightgray;
+}
+
+.contact .detail {
+  width: 100%;
+  height: 80%;
+  padding: 0 100px;
+}
+
+.contact .detail form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
+}
+
+.contact .detail form input {
+  margin-bottom: 10px;
+  height: 50px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.contact .detail form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 300px;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .social-icon i {
+  cursor: pointer;
+  font-size: 40px;
+  background-color: #ffffff;
+  padding: 3px 3px;
+  margin: 0 20px 20px;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}
+
+.footer .social-icon i:hover {
+  background-color: #75757575;
+  color: #ffffff;
+}
+
+.footer .footer-nav {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.footer .footer-nav li a {
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+  padding: 10px 5px;
+  font-weight: bold;
+}
+
+.footer .footer-nav li:hover a {
+  text-decoration: underline;
+}
+
+@media (max-width: 1280px) {
+  .city .detail {
+    padding: 0 70px;
+  }
+  .nav .responsive-nav {
+    width: 100%;
+    background-color: rgba(224, 162, 162, 0.8);
+    flex-direction: column;
+    position: fixed;
+    top: -90%;
+    left: 0%;
+    transform: translateY(-10%);
+    z-index: 100;
+    padding: 0 0 10px 0;
+    transition: all 0.5s linear;
+  }
+  .nav .responsive-nav.active {
+    top: 18%;
+  }
+  .nav .responsive-nav .navbar {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .nav .responsive-nav .navbar-right {
+    flex-direction: column;   /* ដាក់ជាបញ្ឈរ */
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .nav .responsive-nav .navbar-right .search,
+  .nav .responsive-nav .navbar-right .login {
+    width: 100%;
+    text-align: center;
+    margin: 8px 0;
+    justify-content: center;
+  }
+   .nav .responsive-nav .navbar-right .search #search-box {
+    width: 70%;
+  }
+  .nav .responsive-nav .navbar-right .search .login {
+    width: 100%;
+    text-align: center;
+    margin: 8px 0;
+  }
+  .hambuger {
+    display: block;
+  }
+  .nav .logo a h1 {
+    padding: 20px 0;
+  }
+  .city {
+    max-width: 90%;
+  }
+  .province {
+    max-width: 90%;
+  }
+  .province .detail .content-province h2 {
+    font-size: 1.8em;
+  }
+  .about {
+    max-width: 90%;
+  }
+  .about .detail {
+    padding: 100px;
+  }
+  .about .detail .desc {
+    font-size: 16px;
+  }
+  .contact {
+    max-width: 90%;
+  }
+  .contact .detail form {
+    width: 70%;
+  }
+  .province .detail {
+    padding: 0 70px;
+  }
+
+  .about .detail {
+    padding: 0 70px;
+  }
+  .about .detail .desc {
+    font-size: 15.5px;
+  }
+  .contact .detail {
+    padding: 0 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .city .detail {
+    padding: 0 50px;
+  }
+  .img-container .modal h1 {
+    font-size: 3.5em;
+  }
+
+  .img-container .modal h2 {
+    font-size: 2.2em;
+  }
+
+  .img-container .modal p {
+    font-size: 18px;
+  }
+
+  .img-container .modal a {
+    padding: 15px 100px;
+  }
+  .city {
+    max-width: 95%;
+  }
+  .province {
+    max-width: 95%;
+  }
+
+  .about {
+    max-width: 95%;
+  }
+  .contact {
+    max-width: 95%;
+  }
+  .contact .detail form {
+    width: 80%;
+  }
+  .province .detail {
+    padding: 0 50px;
+  }
+
+  .about .detail {
+    padding: 0 50px;
+  }
+  .about .detail .desc {
+    font-size: 14px;
+  }
+  .contact .detail {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .city .detail {
+    padding: 0 30px;
+  }
+  .img-container .modal h1 {
+    font-size: 3em;
+  }
+
+  .img-container .modal h2 {
+    font-size: 2em;
+  }
+
+  .img-container .modal p {
+    font-size: 16px;
+  }
+
+  .img-container .modal a {
+    padding: 15px 120px;
+  }
+  .city {
+    max-width: 100%;
+  }
+  .province {
+    max-width: 100%;
+    height: 180vh;
+  }
+  .province .title {
+    height: 15%;
+    justify-content: center;
+  }
+  .province .detail {
+    height: 85%;
+    grid-template-columns: 1fr;
+  }
+  .province .detail .content-province {
+    width: 100%;
+    height: 90%;
+  }
+
+  .about {
+    max-width: 100%;
+  }
+  .about .detail .desc {
+    font-size: 13.2px;
+  }
+  .contact {
+    max-width: 100%;
+  }
+  .contact .detail form {
+    width: 90%;
+  }
+  .province .detail {
+    padding: 0 30px;
+  }
+
+  .about .detail {
+    padding: 0 30px;
+  }
+  .contact .detail {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .img-container .modal h1 {
+    font-size: 2.5em;
+  }
+
+  .img-container .modal h2 {
+    font-size: 1.8em;
+  }
+
+  .img-container .modal p {
+    font-size: 12px;
+  }
+
+  .img-container .modal a {
+    padding: 15px 140px;
+  }
+  .city .detail {
+    padding: 0 20px;
+  }
+  .province .detail {
+    padding: 0 20px;
+  }
+
+  .about .detail {
+    padding: 0 20px;
+  }
+  .about .detail .desc {
+    font-size: 11px;
+  }
+  .contact .detail {
+    padding: 0 20px;
+  }
+  .footer .social-icon i {
+    font-size: 20px;
+  }
+}
