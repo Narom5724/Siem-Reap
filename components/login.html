@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siem Reap</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/city.css" />
+    <link rel="stylesheet" href="../css/style2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <nav class="nav">
+        <div class="logo">
+          <a href="../index2.html"><h1>Siem Reap</h1></a>
+        </div>
+        <div class="responsive-nav">
+          <ul class="navbar">
+            <li><a href="../index2.html">Home</a></li>
+            <li><a href="../components/city.html">City</a></li>
+            <li><a href="../components/province.html">Province</a></li>
+            <li><a href="../components/temples.html">Temple</a></li>
+            <li><a href="../components/about.html">About</a></li>
+            <li><a href="../components/contact.html">Contact</a></li>
+          </ul>
+          <div class="navbar-right">
+            <div class="search">
+              <input type="text" id="search-box" placeholder="search" />
+              <input type="button" id="search-btn" value="search" />
+            </div>
+            <div class="login">
+              <a href="./login.html"><i class="fa-solid fa-user"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="hambuger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+      <!-- Title -->
+      <h1 class="title__city">Register</h1>
+      <!-- Container1 -->
+      <div class="container1" id="container1">
+        <!-- Sign Up Form -->
+        <div class="form-container sign-up-container">
+          <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign Up</button>zz
+          </form>
+        </div>
+        <!-- Sign In Form -->
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>Sign in</h1>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+              <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            <button>Sign In</button>
+          </form>
+        </div>
+        <!-- Overlay -->
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>Welcome Back</h1>
+              <p>To keep connected with us please login with your personal info</p>
+              <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="social-icon">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-pinterest"></i>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#capital">Capital</a></li>
+        <li><a href="#city">City</a></li>
+        <li><a href="#province">Province</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </footer>
+    <!-- Script JS -->
+    <script>
+      const signUpButton = document.getElementById("signUp");
+      const signInButton = document.getElementById("signIn");
+      const container1 = document.getElementById("container1");
+
+      signUpButton.addEventListener("click", () => {
+        container1.classList.add("right-panel-active");
+      });
+
+      signInButton.addEventListener("click", () => {
+        container1.classList.remove("right-panel-active");
+      });
+    </script>
+    <script src="../js/app2.js"></script>
+  </body>
+</html>
